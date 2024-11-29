@@ -1,0 +1,132 @@
+# Node modules
+node_modules/
+
+# Build directories
+build/
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*.swp
+*.swo
+*.swn
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.vs/
+
+# VSCode settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# JetBrains IDEs
+*.iml
+*.iws
+*.ipr
+
+# Webpack
+webpack.config.js
+
+# Build output
+/build/
+/out/
+/dist/
+
+# React Native
+*.xcuserstate
+*.gradle
+android/
+ios/
+
+# Next.js
+.next/
+out/
+
+# Svelte
+.svelte/
+
+# Gatsby
+public/
+
+# Vue.js
+dist/
+
+# Nuxt.js
+.nuxt/
+
+# Angular
+dist/
+.tmp/
+out-tsc/
+angular.json
+
+# Ember.js
+/dist/
+tmp/
+node_modules/
+
+# Meteor
+/.meteor/
+
+# Yarn
+.yarn/
+.yarnrc
+.pnp.*
+
+# eslint
+.eslintrc.js
+
+# Prettier
+.prettierrc
+
+# Typescript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Testing
+*.cover
+*.spec.js
+*.test.js
+*.test.ts
+*.spec.ts
+
+# NPM package logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Jest
+coverage/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
