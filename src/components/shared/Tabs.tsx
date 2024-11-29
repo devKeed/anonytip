@@ -8,7 +8,7 @@ interface TabsProps {
 
 const Tabs: React.FC<TabsProps> = ({ activeTab, setActiveTab }) => {
   return (
-    <div style={{display:"flex", gap:"20px"}}>
+    <div style={{display:"flex", gap:"10px"}}>
       <MyButton
         active={activeTab === "donate"}
         onClick={() => setActiveTab("donate")}

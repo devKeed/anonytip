@@ -6,7 +6,7 @@ import {
   TableBody,
   TableCell,
   TableContainer,
-  TableHead,
+  // TableHead,
   TableRow,
   Paper,
   Button,
@@ -27,14 +27,13 @@ const PendingClaims: React.FC<{ claims: PendingClaim[] }> = ({ claims }) => {
         backgroundColor: "rgba(255, 255, 255, 0.1)",
         color: "#fff",
         overflow: "auto",
-        maxHeight: "400px", // Scrollable area when the content exceeds this height
+        maxHeight: "270px", 
       }}
     >
       <Typography
         variant="h6"
         sx={{
           fontWeight: "bold",
-          marginBottom: 2,
           textAlign: "left",
         }}
       >
@@ -43,13 +42,13 @@ const PendingClaims: React.FC<{ claims: PendingClaim[] }> = ({ claims }) => {
 
       <TableContainer component={Paper} sx={{ backgroundColor: "transparent" }}>
         <Table sx={{ minWidth: 300 }}>
-          <TableHead>
+          {/* <TableHead>
             <TableRow>
               <TableCell sx={{ color: "#fff", fontWeight: "bold" }}>Amount</TableCell>
               <TableCell sx={{ color: "#fff", fontWeight: "bold" }}>Address</TableCell>
-              <TableCell sx={{ color: "#fff", fontWeight: "bold" }}>Action</TableCell>
+              <TableCell sx={{ color: "#fff", fontWeight: "bold", textAlign: "center" }}>Action</TableCell>
             </TableRow>
-          </TableHead>
+          </TableHead> */}
           <TableBody>
             {claims.map((claim, index) => (
               <TableRow
@@ -60,18 +59,13 @@ const PendingClaims: React.FC<{ claims: PendingClaim[] }> = ({ claims }) => {
                   },
                 }}
               >
-                <TableCell sx={{ color: "#fff" }}>{claim.amount}</TableCell>
+                <TableCell sx={{ color: "#fff" }}>{claim.amount} from </TableCell>
                 <TableCell sx={{ color: "#fff" }}>{claim.address}</TableCell>
-                <TableCell sx={{ textAlign: "center" }}>
+                <TableCell sx={{ textAlign: "end" }}>
                   <Button
                     variant="contained"
                     color="primary"
-                    sx={{
-                      backgroundColor: "#7b1fa2",
-                      "&:hover": {
-                        backgroundColor: "#63138a",
-                      },
-                    }}
+                    
                   >
                     Receive
                   </Button>
@@ -82,8 +76,7 @@ const PendingClaims: React.FC<{ claims: PendingClaim[] }> = ({ claims }) => {
         </Table>
       </TableContainer>
 
-      {/* Add a divider to separate if needed */}
-      {claims.length > 0 && <Divider sx={{ backgroundColor: "rgba(255, 255, 255, 0.2)", marginTop: 2 }} />}
+      {claims.length > 0 && <Divider sx={{ backgroundColor: "rgba(255, 255, 255, 0.2)", marginTop: 1 }} />}
     </Box>
   );
 };

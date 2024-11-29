@@ -178,11 +178,10 @@ function Homepage() {
           AnonyTip
         </Typography>
 
-        <Box sx={{ position: "absolute", bottom: "5px" }}>
+        <Box sx={{ position: "absolute", bottom: "0px" }}>
           <img src="images/rocket.png" alt="" />
         </Box>
 
-        {/* Main content */}
         <Paper
           elevation={10}
           sx={{
@@ -196,7 +195,7 @@ function Homepage() {
             zIndex: 1,
             display: "flex",
             flexDirection: "column",
-            gap: "30px",
+            gap: "20px",
           }}
         >
           <Header />

@@ -6,7 +6,7 @@ import {
   TableBody,
   TableCell,
   TableContainer,
-  TableHead,
+  // TableHead,
   TableRow,
   Paper,
   Divider,
@@ -32,14 +32,13 @@ const HistoryList: React.FC<HistoryListProps> = ({ title, items }) => {
         backgroundColor: "rgba(255, 255, 255, 0.1)",
         color: "#fff",
         overflow: "auto",
-        maxHeight: "400px", // Set maxHeight to create scrollable area
+        maxHeight: "250px",
       }}
     >
       <Typography
         variant="h6"
         sx={{
           fontWeight: "bold",
-          marginBottom: 2,
           textAlign: "left",
         }}
       >
@@ -47,20 +46,20 @@ const HistoryList: React.FC<HistoryListProps> = ({ title, items }) => {
       </Typography>
 
       <TableContainer component={Paper} sx={{ backgroundColor: "transparent" }}>
-        <Table sx={{ minWidth: 300 }}>
-          <TableHead>
+        <Table sx={{ minWidth: 280 }}>
+          {/* <TableHead>
             <TableRow>
-              <TableCell sx={{ color: "#fff", fontWeight: "bold" }}>Address</TableCell>
-              <TableCell sx={{ color: "#fff", fontWeight: "bold" }}>Time</TableCell>
-              <TableCell sx={{ color: "#fff", fontWeight: "bold" }}>Amount</TableCell>
+              <TableCell sx={{ color: "#fff", paddingBottom: 0.9, paddingTop: 0.9, fontWeight: "bold" }}>Address</TableCell>
+              <TableCell sx={{ color: "#fff", paddingBottom: 0.9, paddingTop: 0.9, fontWeight: "bold" }}>Time</TableCell>
+              <TableCell sx={{ color: "#fff", paddingBottom: 0.9, paddingTop: 0.9, fontWeight: "bold" }}>Amount</TableCell>
             </TableRow>
-          </TableHead>
+          </TableHead> */}
           <TableBody>
             {items.map((item, index) => (
               <TableRow key={index} sx={{ "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.05)" } }}>
-                <TableCell sx={{ color: "#fff" }}>{item.address}</TableCell>
-                <TableCell sx={{ color: "#fff" }}>{item.time}</TableCell>
-                <TableCell sx={{ color: "#fff" }}>{item.amount}</TableCell>
+                <TableCell sx={{ color: "#fff", paddingBottom: 0.9, paddingTop: 0.9 }}>{item.address}</TableCell>
+                <TableCell sx={{ color: "#fff", paddingBottom: 0.9, paddingTop: 0.9 }}>{item.time}</TableCell>
+                <TableCell sx={{ color: "#fff", paddingBottom: 0.9, paddingTop: 0.9 }}>{item.amount}</TableCell>
               </TableRow>
             ))}
           </TableBody>
